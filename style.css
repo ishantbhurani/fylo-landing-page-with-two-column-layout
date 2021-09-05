@@ -27,3 +27,51 @@ header,
 button {
   font-family: "Raleway", sans-serif;
 }
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 3.5em 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-wrapper {
+  min-width: 5em;
+  width: 20%;
+  max-width: 10em;
+}
+
+.logo-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.header-nav {
+  width: 50%;
+  max-width: 15em;
+}
+
+.header-nav-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.header-nav-link:hover {
+  text-decoration: underline;
+}
