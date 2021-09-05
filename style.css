@@ -13,6 +13,7 @@
   --color-moderate-cyan: hsl(170, 45%, 43%);
   --color-light-grayish-blue: hsl(240, 75%, 98%);
   --color-light-gray: hsl(0, 0%, 75%);
+  --color-red: hsl(0, 100%, 63%);
 }
 
 body {
@@ -36,6 +37,19 @@ a {
   display: inline-block;
   text-decoration: none;
   color: inherit;
+}
+
+input {
+  outline: transparent;
+}
+
+button {
+  background: none;
+  outline: transparent;
+  border: transparent;
+  font-weight: bold;
+  text-transform: capitalize;
+  cursor: pointer;
 }
 
 .header-container {
@@ -74,4 +88,84 @@ a {
 
 .header-nav-link:hover {
   text-decoration: underline;
+}
+
+.hero-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.hero-img-wrapper {
+  width: 50%;
+}
+
+.hero-img-wrapper img {
+  width: 100%;
+}
+
+.hero-info {
+  width: 45%;
+}
+
+.hero-title {
+  font-size: 2.3rem;
+  line-height: 1.4;
+  color: var(--color-very-dark-blue);
+  margin-bottom: 0.4em;
+}
+
+.hero-subtitle {
+  padding-right: 2em;
+  font-size: 1rem;
+  color: var(--color-very-dark-blue);
+  margin-bottom: 1.5em;
+}
+
+.hero-form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0.875em;
+}
+
+.hero-form:invalid + .hero-error {
+    opacity: 1;
+}
+
+.hero-email-input {
+  width: 53%;
+  padding: 0.875em 1.5em;
+  transition: all .2s ease-in-out;
+}
+
+.hero-email-input:invalid {
+    border: 1px solid var(--color-red);
+}
+
+.hero-submit {
+  width: 32%;
+  background-color: var(--color-bright-blue);
+  color: var(--color-light-grayish-blue);
+  padding: 1em;
+  border-radius: 0.3em;
+  box-shadow: 2px 2px 0.3em var(--color-light-gray);
+  transition: all .2s ease-in-out;
+}
+
+.hero-submit:hover,
+.hero-submit:focus {
+  opacity: 0.7;
+}
+
+.hero-error {
+    color: var(--color-red);
+    font-size: .7rem;
+    margin: .5em 0;
+    opacity: 0;
 }
