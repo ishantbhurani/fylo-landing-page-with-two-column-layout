@@ -92,7 +92,8 @@ button {
 }
 
 .hero-container,
-.working-container {
+.working-container,
+.early-access-container {
   width: 90%;
   margin: 0 auto;
   display: flex;
@@ -156,14 +157,18 @@ button {
   border: 1px solid var(--color-red);
 }
 
-.hero-submit {
-  width: 32%;
+.hero-submit,
+.early-access-submit {
   background-color: var(--color-bright-blue);
   color: var(--color-light-grayish-blue);
   padding: 1em;
   border-radius: 0.3em;
-  box-shadow: 2px 2px 0.3em var(--color-light-gray);
   transition: all 0.2s ease-in-out;
+}
+
+.hero-submit {
+  width: 32%;
+  box-shadow: 2px 2px 0.3em var(--color-light-gray);
 }
 
 .hero-submit:hover,
@@ -267,4 +272,62 @@ button {
 
 .user-job {
   font-size: 0.6rem;
+}
+
+.early-access {
+  background-color: var(--color-desaturated-blue);
+  color: var(--color-light-grayish-blue);
+}
+
+.early-access-container {
+  flex-direction: row;
+  padding: 6em 0;
+}
+
+.early-access-info {
+  width: 40%;
+}
+
+.early-access-title {
+  font-size: 1.9rem;
+  margin-bottom: 0.6em;
+}
+
+.early-access-desc {
+  line-height: 1.6;
+}
+
+.early-access-form {
+  width: 40%;
+  max-width: 30em;
+}
+
+.early-access-form:invalid .early-access-error {
+  opacity: 1;
+}
+
+.early-access-email-input {
+  width: 100%;
+  padding: 0.875em 1.5em;
+  transition: all 0.2s ease-in-out;
+}
+
+.early-access-email-input:invalid {
+  border: 1px solid var(--color-red);
+}
+
+.early-access-submit {
+  box-shadow: 2px 2px 1em -0.5em var(--color-very-dark-blue);
+  padding: 1em 2em;
+}
+
+.early-access-submit:hover,
+.early-access-submit:focus {
+  background-color: hsl(224, 93%, 68%);
+}
+
+.early-access-error {
+  font-size: 0.7rem;
+  margin-bottom: 1em;
+  opacity: 0;
 }
