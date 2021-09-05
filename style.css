@@ -183,6 +183,7 @@ button {
   background: var(--color-light-grayish-blue);
   margin-top: 16em;
   padding-top: 3.5em;
+  color: var(--color-very-dark-blue);
 }
 
 .how-it-works::before {
