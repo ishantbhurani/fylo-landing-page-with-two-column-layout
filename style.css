@@ -141,14 +141,19 @@ button {
   flex-direction: row;
   justify-content: flex-start;
   gap: 0.875em;
+  align-items: flex-start;
 }
 
-.hero-form:invalid + .hero-error {
+.hero-form:invalid .hero-error {
   opacity: 1;
 }
 
-.hero-email-input {
+.hero-form-group {
   width: 53%;
+}
+
+.hero-email-input {
+  width: 100%;
   padding: 0.875em 1.5em;
   transition: all 0.2s ease-in-out;
 }
@@ -416,4 +421,152 @@ footer .logo-wrapper img {
 .social-link:hover,
 .social-link:focus {
   border-color: var(--color-desaturated-blue);
+}
+
+@media screen and (max-width: 768px) {
+  .header-container {
+    padding: 1.5em 0 5em;
+  }
+
+  .hero-container,
+  .hero-form,
+  .working-container,
+  .early-access-container {
+    flex-direction: column;
+  }
+
+  .hero-img-wrapper,
+  .hero-info,
+  .working-img-wrapper,
+  .working-info,
+  .early-access-info {
+    width: 90%;
+  }
+
+  .hero-info,
+  .working-title,
+  .early-access-info {
+    text-align: center;
+  }
+
+  .hero-subtitle,
+  .working-desc {
+    padding: 0;
+  }
+
+  .working-desc,
+  .hero-form-group,
+  .hero-submit,
+  .testimonial-card,
+  .early-access-submit {
+    width: 100%;
+  }
+
+  .hero-error {
+    margin: 0;
+    text-align: left;
+  }
+
+  .how-it-works {
+    margin-top: 10em;
+  }
+
+  .working-desc {
+    margin-bottom: 2em;
+  }
+
+  .working-link {
+    margin: 0 auto;
+  }
+
+  .early-access-container {
+    padding: 4em 0;
+  }
+
+  .early-access-form {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .footer-container {
+    width: 80%;
+    padding: 4em 0;
+  }
+
+  footer .logo-wrapper {
+    width: 100%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    margin-top: 2em;
+    gap: 2em;
+  }
+
+  .quick-links-wrapper {
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .contact,
+  .quick-links-wrapper,
+  .social-links {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header-nav-list,
+  .working-link {
+    font-size: 0.8rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .working-title {
+    font-size: 1rem;
+  }
+
+  .hero-subtitle,
+  .working-desc {
+    font-size: 0.9rem;
+  }
+
+  .how-it-works::before {
+    height: 3em;
+    background: url(./images/bg-curve-mobile.svg) no-repeat top center;
+  }
+
+  .testimonial-card {
+    padding: 1em;
+    padding-left: 1.5em;
+  }
+
+  .testimonial-desc {
+    font-size: 0.7rem;
+    margin-bottom: 1.5em;
+  }
+
+  .user-img-wrapper img {
+    width: 1.5em;
+  }
+
+  .user-name {
+    font-size: 0.6rem;
+    margin-bottom: 0.1em;
+  }
+
+  .user-job {
+    font-size: 0.5rem;
+  }
+
+  .early-access-title {
+    font-size: 1.2rem;
+  }
+
+  .early-access-desc {
+    font-size: 0.9rem;
+  }
 }
